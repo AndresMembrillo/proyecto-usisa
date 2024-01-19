@@ -39,15 +39,26 @@ Después de probar varios modelos de time series (RandomForestRegressor, XGBoost
 Pero debido a la poca cantidad de datos que teniamos, los resultados de las metricas no nos convencian y decidimos hacer uso de la siguiente libreria:
 
 ## pycaret.time_series.TSForecastingExperiment
-Esta libreria de pycarte realiza las siguientes tareas:
+Usaremos los datos de la facturación mensual en euros para explicar las tareas que realiza la libreria de pycaret:
 
-- Evalúa todos los modelos de series temporales y los clasifica según su rendimiento.
-- Selecciona los mejores modelos.
-- Realiza un ajuste adicional de los parámetros para los modelos seleccionados.
-- Combina los mejores modelos para obtener un modelo mixto.
-- Realiza predicciones del modelo mixto en el conjunto de pruebas y proyecciones futuras.
+- Visualizaza los datos originales:
+  ![original](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/249f60e6-18a0-435e-945c-4cc46eaf0a40)
   
-Además, la biblioteca proporciona una función que visualiza los datos, muestra la separación entre el conjunto de entrenamiento y prueba, presenta las predicciones de los mejores modelos, muestra la predicción del modelo combinado y realiza proyecciones futuras. Este enfoque integral facilita la evaluación y el despliegue de modelos de series temporales de manera más eficiente.
+- Separa los datos en train y test:
+  ![train_test](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/c83ac201-67be-43cf-aceb-65fde0afb199)
+  
+- Evalúa todos los modelos de series temporales y los clasifica según su rendimiento. Seleccionamos los 4 mejores modelos:
+  ![clasificacion](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/2ceece91-4e9e-435b-9d63-171788ba6325)
+  
+- Realiza un ajuste adicional de los parámetros para los modelos seleccionados:
+  ![Tuneado](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/7603d07c-7ad6-4dd1-b43b-619d8368b969)
+  
+- Combina los mejores modelos para obtener un modelo mixto.
+  ![blended](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/fba90b80-648a-43d3-aa87-a3befe896d44)
+  
+- Realiza predicciones del modelo mixto en el conjunto de pruebas y proyecciones futuras.
+  ![forecast](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/c7854303-e32f-4aa9-a140-70479d5f2309)
+nota: estos graficos son dinamicos y no se pueden visualizar en GitHub, los graficos de los archivos `1_EDA-timeseries_diario.ipynb` y `2_modelo_AutoARIMA.ipynb` si se pueden visualizar en GitHub.
 
 ## Conclusión
 El objetivo principal se ha alcanzado de manera parcial. A pesar de la limitada cantidad de datos disponibles, hemos logrado desarrollar un sólido modelo de predicción para la facturación mensual a corto plazo. Sin embargo, en contraste, el modelo de predicción de pedidos mensuales no ha arrojado resultados favorables.
