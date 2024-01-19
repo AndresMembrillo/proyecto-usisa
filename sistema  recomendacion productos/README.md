@@ -1,5 +1,5 @@
 # PROYECTO USISA - SISTEMA DE RECOMENDACIÓN DE PRODUCTOS
-Proyectos como freelance  para la tienda online de Union Salazonera Isleña, S.A. (USISA),  empresa de conservas de pescado más grande de Andalucia.
+Proyectos como freelance para la tienda online de Unión Salazonera Isleña, S.A. (USISA),  empresa de conservas de pescado más grande de Andalucía.
 
 ![usisa_barco](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/d019eb2f-299d-4f14-b5c2-a1bae1c6bb58)
 
