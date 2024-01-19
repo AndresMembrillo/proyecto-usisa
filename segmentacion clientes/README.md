@@ -38,4 +38,5 @@ También graficamos un mapa de España por cada cluster, con la geolocalización
 
 ![cluster2](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/bf86ea3b-d3a6-468b-bde4-2583e810ac5c)
 
+## Conclusión
 Hemos segmentado los clientes y sabemos donde se localiza cada grupo, esta información junto a los datos del cliente (correo electrónico) es de gran valor para una campaña de marketing.
