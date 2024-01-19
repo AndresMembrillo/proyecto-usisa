@@ -1,5 +1,5 @@
 # PROYECTO USISA - PREDICCIÓN DE VENTAS
-Proyectos como freelance  para la tienda online de Union Salazonera Isleña, S.A. (USISA),  empresa de conservas de pescado más grande de Andalucia.
+Proyectos como freelance  para la tienda online de Unión Salazonera Isleña, S.A. (USISA),  empresa de conservas de pescado más grande de Andalucía.
 
 ![usisa_barco](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/d019eb2f-299d-4f14-b5c2-a1bae1c6bb58)
 
@@ -41,7 +41,7 @@ Pero debido a la poca cantidad de datos que teniamos, los resultados de las metr
 ## pycaret.time_series.TSForecastingExperiment
 Usaremos los datos de la facturación mensual en euros para explicar las tareas que realiza la libreria de pycaret:
 
-- Visualizaza los datos originales:
+- Visualiza los datos originales:
   ![original](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/249f60e6-18a0-435e-945c-4cc46eaf0a40)
   
 - Separa los datos en train y test:
