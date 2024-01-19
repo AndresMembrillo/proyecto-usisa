@@ -19,26 +19,38 @@ En cuanto a la duración del pronóstico futuro estará condicionada por el mode
 
 ## EDA
 
-![EDA_clustering](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/22cefa6b-f4d0-4541-ada2-d854a24b56e2)
+El archivo con nombre `1_EDA-timeseries_diario.ipynb` recoge los datos con frecuencia diaria y visualiza los siguientes gráficos:
 
-## Modelo K-MEANS
-Para la segmentación de clientes por comportamiento de compra, necesitamos un modelo de aprendizaje no supervisado ya que carecemos de la variable objetivo, que en nuestro caso sería el grupo o segmento que se asigna a cada cliente.
+- `Gráifcos de time series`.
+- `Descomposición: Tendencia, estacionalidad y ruido`.
+- `Graficos de autocorrelación y autocorrelación parcial.`
 
-Para ello vamos a comparar dos modelos de clustering, K-Means y DBSCAN. Después de visualizar los clusters, estudiar las métricas de cada modelo, aplicamos el más eficiente: `K-MEANS`
+## Modelo time series
 
-![cluster_clientes](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/50e9c32a-9591-4dca-bfa2-ec08dbee9a7e)
+Para llevar a cabo la predicción futura, construimos un modelo de aprendizaje supervisado abordando los siguientes puntos clave:
 
-Se agrupan los clientes por sus respectivos clusters y se obtiene el centro de cada cluster usando la media para ver las características que mejor explican cada grupo. 
+- `Frecuencia de Datos`: Después de probar con frecuencia diaria y semanal, optamos por una frecuencia mensual, ya que nuestro modelo ofrece mejores resultados con esta configuración.
+- `Proporción de Datos en Train y Test`: Seleccionamos los últimos 3 meses como conjunto de prueba y el resto para entrenamiento. Esta proporción demostró ser la más efectiva, proporcionando las métricas más sólidas para la generalización del modelo.
+- `Horizonte de Predicción`: Elegimos una frecuencia mensual y un horizonte de predicción de 3 meses, alineado con la muestra utilizada en el conjunto de prueba. Es esencial tener en cuenta que, a medida que aumentamos el horizonte de predicción, el error tiende a acumularse, siendo el último mes menos fiable.
 
-- `Clúster 0`: su última compra fue hace mucho, promedian tan solo un pedido y es el grupo que menos dinero gasta. Corresponde al 54% de los clientes. El clúster 0 lo etiquetamos como clientes perdidos
+## Modelo AutoARIMA
+Después de probar varios modelos de time series (RandomForestRegressor, XGBoostRegressor, ARIMA…). El archivo con nombre: `2_modelo_AutoARIMA.ipynb` contiende un modelo AutoARIMA que selecciona automáticamente los mejores parámetros para el modelo ARIMA, es el que mejores resultados me ha dado. 
 
-- `Clúster 1`: se observa que la última compra de este grupo ha sido muy reciente, promedian tan solo un pedido y gasta moderadamente. Comprende el 22% aproximadamente del total de clientes. El clúster 1 lo etiquetamos  como clientes nuevos.
+Pero debido a la poca cantidad de datos que teniamos, los resultados de las metricas no nos convencian y decidimos hacer uso de la siguiente libreria:
 
-- `Clúster 2`: su última compra ha sido hace relativamente poco, es el grupo que más pedidos promedia y que más gasta prácticamente cuadruplicando los demás. Se trata del 24% de los clientes. El clúster 2  lo etiquetamos como clientes fieles.
+## pycaret.time_series.TSForecastingExperiment
+Esta libreria de pycarte realiza las siguientes tareas:
 
-También graficamos un mapa de España por cada cluster, con la geolocalización donde se aprecian dónde están los mayores volúmenes de pedidos de cada cluster según su código postal. A continuación se visualiza el mapa del cluster 2, etiquetado como el grupo de los clientes fieles
-
-![cluster2](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/bf86ea3b-d3a6-468b-bde4-2583e810ac5c)
+- Evalúa todos los modelos de series temporales y los clasifica según su rendimiento.
+- Selecciona los mejores modelos.
+- Realiza un ajuste adicional de los parámetros para los modelos seleccionados.
+- Combina los mejores modelos para obtener un modelo mixto.
+- Realiza predicciones del modelo mixto en el conjunto de pruebas y proyecciones futuras.
+  
+Además, la biblioteca proporciona una función que visualiza los datos, muestra la separación entre el conjunto de entrenamiento y prueba, presenta las predicciones de los mejores modelos, muestra la predicción del modelo combinado y realiza proyecciones futuras. Este enfoque integral facilita la evaluación y el despliegue de modelos de series temporales de manera más eficiente.
 
 ## Conclusión
-Hemos segmentado los clientes y sabemos donde se localiza cada grupo, esta información junto a los datos del cliente (correo electrónico) es de gran valor para una campaña de marketing.
+El objetivo principal se ha alcanzado de manera parcial. A pesar de la limitada cantidad de datos disponibles, hemos logrado desarrollar un sólido modelo de predicción para la facturación mensual a corto plazo. Sin embargo, en contraste, el modelo de predicción de pedidos mensuales no ha arrojado resultados favorables.
+
+En resumen, hemos logrado desarrollar un modelo de forecasting capaz de realizar predicciones fiables para la facturación de uno o dos meses. No obstante, es importante señalar que a medida que intentamos predecir un mayor número de meses, se observa un aumento progresivo en el error.
+
