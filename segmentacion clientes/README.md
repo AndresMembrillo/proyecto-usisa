@@ -24,17 +24,17 @@ Para la segmentación de clientes por comportamiento de compra, necesitamos un m
 
 Para ello vamos a comparar dos modelos de clustering, K-Means y DBSCAN. Después de visualizar los clusters, estudiar las métricas de cada modelo, aplicamos el más eficiente: `K-MEANS`
 
-![cluster_clientes](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/50e9c32a-9591-4dca-bfa2-ec08dbee9a7e)
+![kmeans](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/39023b00-5e1a-4691-af45-62390ea09e00)
 
 Se agrupan los clientes por sus respectivos clusters y se obtiene el centro de cada cluster usando la media para ver las características que mejor explican cada grupo. El clúster 0  lo etiquetamos como clientes fieles.
 
-- `Clúster 0`: su última compra ha sido hace relativamente poco, es el grupo que más pedidos promedia y que más gasta prácticamente cuadruplicando los demás. Se trata del 24% de los clientes.
+- `Clúster 0`: su última compra fue hace mucho, promedian tan solo un pedido y es el grupo que menos dinero gasta. Corresponde al 54% de los clientes. El clúster 1  lo etiquetamos como clientes perdidos.
 
-- `Clúster 1`: su última compra fue hace mucho, promedian tan solo un pedido y es el grupo que menos dinero gasta. Corresponde al 54% de los clientes. El clúster 1  lo etiquetamos como clientes perdidos.
+- `Clúster 1`: se observa que la última compra de este grupo ha sido muy reciente, promedian tan solo un pedido y gasta moderadamente. Comprende el 22% aproximadamente del total de clientes. El clúster 2  lo etiquetamos como clientes nuevos.
 
-- `Clúster 2`: se observa que la última compra de este grupo ha sido muy reciente, promedian tan solo un pedido y gasta moderadamente. Comprende el 22% aproximadamente del total de clientes. El clúster 2  lo etiquetamos como clientes nuevos.
+- `Clúster 2`: su última compra ha sido hace relativamente poco, es el grupo que más pedidos promedia y que más gasta prácticamente cuadruplicando los demás. Se trata del 24% de los clientes.
 
-También graficamos un mapa de España por cada cluster, con la geolocalización donde se aprecian dónde están los mayores volúmenes de pedidos de cada cluster según su código postal. A continuación se visualiza el mapa del cluster 2, etiquetado como el grupo de los clientes nuevos.
+También graficamos un mapa de España por cada cluster, con la geolocalización donde se aprecian dónde están los mayores volúmenes de pedidos de cada cluster según su código postal. A continuación se visualiza el mapa del cluster 2, etiquetado como el grupo de los clientes fieles.
 
 ![cluster2](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/bf86ea3b-d3a6-468b-bde4-2583e810ac5c)
 
