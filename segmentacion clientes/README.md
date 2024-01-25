@@ -37,13 +37,13 @@ Se agrupan los clientes por sus respectivos clusters y se obtiene el centro de c
 También graficamos un mapa de España por cada cluster, con la geolocalización donde se aprecian dónde están los mayores volúmenes de pedidos de cada cluster según su código postal. 
 
 A continuación se visualiza el mapa del cluster 0, etiquetado como el grupo de los clientes perdidos.
-![mapa0](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/6e960ba3-3b1e-49e6-baf3-e890d1c72074)
+![00mapas](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/fd60302d-47bb-436e-a1e3-b071b233d565)
 
 Mapa del cluster 1, etiquetado como el grupo de los clientes nuevos:
-![mapa1](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/8a6f4eb9-ac5b-471d-8cc8-5e100067d74c)
+![01mapas](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/9894d5c4-40f7-4ead-ae93-c417bfe48310)
 
 Mapa del cluster 2, etiquetado como el grupo de los clientes fieles:
-![mapa2](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/6aba7dd0-d652-4e9c-82d6-1975f90d033e)
+![02mapas](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/13faae0a-e58b-4482-bba6-f43718d8e7e2)
 
   nota: los mapas son gráficos de la libreria folium, son dinámicos y no se pueden visualizar en GitHub.
 
