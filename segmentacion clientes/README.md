@@ -34,12 +34,15 @@ Se agrupan los clientes por sus respectivos clusters y se obtiene el centro de c
 
 - `Clúster 2`: su última compra ha sido hace relativamente poco, es el grupo que más pedidos promedia y que más gasta prácticamente cuadruplicando los demás. Se trata del 24% de los clientes. El clúster 2 lo etiquetamos como clientes fieles.
 
-También graficamos un mapa de España por cada cluster, con la geolocalización donde se aprecian dónde están los mayores volúmenes de pedidos de cada cluster según su código postal. A continuación se visualiza el mapa del cluster 2, etiquetado como el grupo de los clientes fieles.
+También graficamos un mapa de España por cada cluster, con la geolocalización donde se aprecian dónde están los mayores volúmenes de pedidos de cada cluster según su código postal. 
 
+A continuación se visualiza el mapa del cluster 0, etiquetado como el grupo de los clientes perdidos.
 ![mapa0](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/6e960ba3-3b1e-49e6-baf3-e890d1c72074)
 
+Mapa del cluster 1, etiquetado como el grupo de los clientes nuevos:
 ![mapa1](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/8a6f4eb9-ac5b-471d-8cc8-5e100067d74c)
 
+Mapa del cluster 2, etiquetado como el grupo de los clientes fieles:
 ![mapa2](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/6aba7dd0-d652-4e9c-82d6-1975f90d033e)
 
   nota: los mapas son gráficos de la libreria folium, son dinámicos y no se pueden visualizar en GitHub.
