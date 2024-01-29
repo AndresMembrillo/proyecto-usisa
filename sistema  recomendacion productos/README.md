@@ -33,7 +33,7 @@ Estos dos pasos son cruciales para la generación de recomendaciones, ya que el 
 
 Se usan unos pocos pedidos de los datos como test, para probar el sistema de recomendación:
 
-![recomendacion2test](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/9f79fa91-41db-40c2-9e2e-fea52cb1073c)
+![Captura de pantalla 2024-01-29 123935](https://github.com/AndresMembrillo/proyecto-usisa/assets/145653361/250df9bc-7c3a-4e75-8f83-0927bc96e334)
 
 También se muestra un ejemplo de cómo obtener recomendaciones para un nuevo pedido específico:
 
