@@ -7,7 +7,7 @@ Proyectos como freelance  para la tienda online de Unión Salazonera Isleña, S.
 La empresa nos ha suministrado todos los datos disponibles de la tienda online de USISA (www.usisa.com). Es importante señalar que, debido a las normativas de protección de datos, no hemos podido cargar los archivos que contienen dicha información.
 
 ## Objetivo 
-El objetivo del proyecto es la segmentación de clientes, diferenciar y agrupar a los clientes de la tienda online según su comportamiento de compra. Con los datos existententes se pueden obtener las siguientes variables:
+El objetivo del proyecto es la segmentación de clientes, diferenciar y agrupar a los clientes de la tienda online según su comportamiento de compra. Con los datos existentes se pueden obtener las siguientes variables:
 
 - `Frecuencia de compra`: Se refiere a la medición del número total de pedidos realizados por un cliente en la tienda online de USISA. 
 
